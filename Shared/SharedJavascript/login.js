@@ -85,7 +85,9 @@ function verifyLogin() {
       password: password,
     },
     success: function (response) {
+      console.log(response);
       var json = JSON.parse(response);
+      console.log(json);
 
       var valid = json.valid;
       var id = json.id;
