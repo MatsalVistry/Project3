@@ -241,7 +241,7 @@ window.onload = function(){
   var myFunc = eval('(' + fontSize + ')');
 
   // Use it
-  myFunc();
+  // myFunc();
 }
 
 
