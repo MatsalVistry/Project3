@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <title>Manager Reports</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="default.css" />
+    <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+    <!-- <link id="mainStyleSheet" rel="stylesheet" href="style.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./ManagerJavascript/managerReportsScript.js" defer></script>
+  </head>
+  
+  <a class="skip-link" href="#maincontent">Skip to main</a>
+  <body>
+    <div class="navbar">
+      <div>
+          <a href='managerReports.html'>Reports</a>
+      </div>
+  
+      <div>
+          <a href='managerProducts.html'>Products</a>
+      </div>
+   
+      <div>
+        <a href='managerInventory.html'>Inventory</a>
+      </div>
+      <div class="menu-dropdown" for="sheetstyle" href="#change style">
+        <select  class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+          <option  value="default" selected>Default</option>
+          <option  value="protanopia">Protanopia</option>
+          <option  value="deuteranopia">Deuteranopia</option>
+          <option  value="tritanopia">Tritanopia</option>
+        </select>
+      </div>
+
+      <div id="google_translate_element"></div>
+      <script type="text/javascript">
+          function googleTranslateElementInit() 
+          {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+          }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+      <div class="menu-dropdown" for="sheetstyle" href="#change style">
+        <select  class="themes" name="themes" onchange="changeSize(value)" id="fontSizes">
+          <option class="btn-size" value="small()">Small</option>
+          <option class="btn-size" value="original()" selected>Original</option>
+          <option class="btn-size" value="medium()" >Medium</option>
+          <option class="btn-size" value="large()">Large</option>
+          <option class="btn-size" value="larger()">Larger</option>
+        </select>
+      </div>
+
+      <div>
+          <a href='../Shared/login.html'>Logout</a>
+      </div>
+      
+  </div>
+
+  <script src="./ManagerJavascript/translate.js" defer></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="navbar.js"></script>
+
+  </div>
+
+  <script src="./ManagerJavascript/translate.js" defer></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="navbar.js"></script>
+    
+    <main id="maincontent">
+      
+      <div class="SideBarNav" id="SideBarNav">
+        <ul>
+          <li>
+            <a href="#PSR">Product Sales Reports</a>
+          </li>
+          <li>
+            <a href="#MSPP">Most Sold Products Pairs</a>
+          </li>
+          <li>
+            <a href="#RR">Restock Report</a>
+          </li>
+          <li>
+            <a href="#ER">Excess Report</a>
+          </li>
+        </ul>
+      </div>
+
+      <section id="PSR">
+        <h2>Product Sales Reports</h2>
+        <div>
+          Given a time window, displays the sales by item from the order history.
+          <br>
+          <br>
+          Directions:
+          <br>
+          <br>
+          1. Input a start date (mm/dd/yyyy).
+          <br>
+          2. Input a end date (mm/dd/yyyy).
+          <br>
+          3. Click submit.
+        </div>
+        <ul>
+          <form class="reports">
+            <!-- <li>Date:</li> -->
+            <!-- <label for="fname">First Date:</label><br> -->
+            <input placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="sales_d1"><br>
+            <!-- <label for="Last Date:">Last Date:</label><br> -->
+            <input placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="sales_d2"><br>
+            <input type="submit" value="Submit" class="salesReportSubmit" id="submit_1">
+          </form> 
+        </ul>
+
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="productSalesReport">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <section id ="MSPP">
+        <h2>Most Sold Products Pairs</h2>
+        <div>
+          Given a time window, displays pairs of menu items that sell together often, sorted by most frequent.
+          <br>
+          <br>
+          Directions:
+          <br>
+          <br>
+          1. Input a start date (mm/dd/yyyy).
+          <br>
+          2. Input a end date (mm/dd/yyyy).
+          <br>
+          3. Click submit.
+        </div>
+        <ul>
+          <form class="reports">
+            <!-- <li>Date:</li> -->
+            <!-- <label for="fname">First Date:</label><br> -->
+            <input placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="pairs_d1"><br>
+            <!-- <label for="Last Date:">Last Date:</label><br> -->
+            <input placeholder="End Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="pairs_d2"><br>
+            <input type="submit" value="Submit" class="productPairsSubmit" id="submit_2">
+          </form> 
+        </ul>
+
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="productPairsReport">
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="RR">
+        <h2>Restock Report</h2>
+        <div>
+          Displays the list of items whose current inventory is less than the item's minimum amount to have around before needing to restock.
+        </div>
+
+
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="restockReport">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+
+      <section id="ER">
+        <h2>Excess Report</h2>
+        <div>
+          Given a timestamp, displays the list of items that only sold less than 10% of their inventory between the timestamp and the current time, assuming no restocks have happened during the window.
+          <br>
+          <br>
+          Directions:
+          <br>
+          <br>
+          1. Input a start date (mm/dd/yyyy).
+          <br>
+          2. Click submit.
+        </div>
+        <ul>
+          <form class="reports">
+            <!-- <li>Date:</li> -->
+            <!-- <label for="fname">First Date:</label><br> -->
+            <input placeholder="Start Date" class="form-control" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="excessDate"><br>
+            <input type="submit" value="Submit" class="excessSubmit" id="submit_3">
+          </form> 
+        </ul>
+
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="excessReport">
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <script src="navbar.js"></script>
+    </main>
+  </body>
+</html>

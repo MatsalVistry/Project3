@@ -1,0 +1,113 @@
+/* navbar*/
+.navbar {
+    background-color: #393734;
+}
+
+.btn-size{
+    background: #393734;
+    color: white;
+}
+
+.btn-size.active{
+    background: #444;
+}
+
+.right {
+    background-color: #A59B7D;
+}
+
+
+input{
+    background-color: #FFFFFF;
+    border: 1px solid #A59B7D;
+    color: #A59B7D;
+
+}
+
+
+
+.cart-item {
+    background-color: white; 
+}
+
+.cart-h2 {
+
+    color: black;
+}
+
+button {
+    background-color: #393734;
+    border: 1px solid #A59B7D;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.delete {
+ 
+    border-color: #A69D87;
+    color: #A69D87
+}
+
+.delete:hover {
+    opacity: 0.7;
+}
+
+.confirm {
+    background-color: #393734;
+    color: white;
+}
+
+
+.cart {
+    background-color: #393734;
+    border-color: #393734;
+    color: white;
+  
+}
+
+.cart:hover {
+    background-color: #FFF7D9 !important;
+    border-color: #FFF7D9 !important;
+    color: #383838 !important;
+}
+
+.themes {
+    background-color: #393734;
+
+  }
+
+  .themes a:hover {
+    background: #A59B7D;
+  }
+
+#google_translate_element select{
+    background:#393734;
+    }
+
+.side-panel {
+    background-color: #A59B7D;
+}
+
+.coffee-product
+{
+    border-color: #A59B7D;
+}
+
+/* button with class addOnOption hover */
+
+.addOnOption:hover {
+    opacity: 0.7;
+}
+
+.right{
+    background-color: #5A583F;
+}
+
+.navbar a
+{
+    color: white;
+}
+

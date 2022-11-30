@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Product</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="default.css" />
+    <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+    <!-- <link id="mainStyleSheet" rel="stylesheet" href="default.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./ManagerJavascript/managerProductsScript.js"></script>
+  </head>
+  <a class="skip-link" href="#maincontent">Skip to main</a>
+  <body>
+     <div class="navbar">
+      <div>
+          <a href='managerReports.html'>Reports</a>
+      </div>
+  
+      <div>
+          <a href='managerProducts.html'>Products</a>
+      </div>
+   
+      <div>
+        <a href='managerInventory.html'>Inventory</a>
+      </div>
+      <div class="menu-dropdown" for="sheetstyle" href="#change style">
+        <select  class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+          <option  value="default" selected>Default</option>
+          <option  value="protanopia">Protanopia</option>
+          <option  value="deuteranopia">Deuteranopia</option>
+          <option  value="tritanopia">Tritanopia</option>
+        </select>
+      </div>
+
+      <div>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() 
+            {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      </div>
+
+      <div class="menu-dropdown" for="sheetstyle" href="#change style">
+        <select  class="themes" name="themes" onchange="changeSize(value)" id="fontSizes">
+          <option class="btn-size" value="small()">Small</option>
+          <option class="btn-size" value="original()" selected>Original</option>
+          <option class="btn-size" value="medium()" >Medium</option>
+          <option class="btn-size" value="large()">Large</option>
+          <option class="btn-size" value="larger()">Larger</option>
+        </select>
+      </div>
+
+      <div>
+          <a href='../Shared/login.html'>Logout</a>
+      </div>
+      
+  </div>
+  <script src="./ManagerJavascript/translate.js" defer></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="navbar.js"></script>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+      
+      <div>
+        <section id="ANP">
+        <h1>Add New Product </h1>
+        <div>
+          Directions:
+          <br>
+          <br>
+          1. Input new product's name.
+          <br>
+          2. Input new product's group type ("food") or ("drinks").
+          <br>
+          3. Input new product's subgroup type ("sandwiches", "cookie", "muffin") or ("coffee", "teas").
+          <br>
+          4. Input new product's price (XX.XX)
+          <br>
+          5. Select ingredients required in new product.
+          <br>
+          6. Click sumbit.
+        </div>
+
+        <ul>
+          <form class="checkbox">
+          <div>
+            <input type="text" placeholder="Name" id="Name_1" name="Name:" class="addNewProductName"><br>
+              <select placeholder="Group" id="Group_1" name="Group:" class="addNewProductGroup">
+                <option value="food">food</option>
+                <option value="drinks">drinks</option>
+              </select>
+              <select placeholder="SubGroup" id="SubGroup_1" name="SubGroup:" class="addNewProductSubgroup">
+                <option class="ff" value="sandwiches">sandwiches</option>
+                <option class="ff" value="cookies">cookies</option>
+                <option class="ff" value="muffin">muffin</option>
+                <option class="dd" value="coffee">coffee</option>
+                <option class="dd"value="teas">teas</option>
+              </select>
+              <input type="text" placeholder="Price" id="Price_1" name="Price:" class="addNewProductPrice"><br>
+              <div class="form-group col-sm-8">
+                <div id="myMultiselect" class="multiselect">
+                  <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
+                    <select class="form-select" id="Ingredients_1">
+                      <option class="sizeINGgr">Ingredients</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="mySelectOptions" class = "unorderedIngredientListAdd">
+                    <label ><input type="checkbox" value="first" class="addCheckboxIngredient"/> First checkbox</label>
+                    <label ><input type="checkbox" value="second" class="addCheckboxIngredient"/> Second checkbox</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <input type="submit" value="Add" class="addProductSubmit" id="Insert_1">
+            </div>
+            </form> 
+          </ul>
+          
+          
+          
+
+        
+        </section>
+
+        <section id="UP">
+          <h2>Update Product </h2>
+          <div>
+            Directions:
+            <br>
+            <br>
+            1. Input existing product's name.
+            <br>
+            2. Input existing product's updated price.
+            <br>
+            3. Select updated ingredients required in existing product. 
+            <br>
+            4. Click sumbit.
+          </div>
+          
+          <ul>
+            <form class="checkbox">
+              <div>
+              <input type="text" placeholder="Name" id="Name_2" name="Name:" class="updateProductName"><br>
+              <input type="text" placeholder="Price" id="Price_2" name="Price:" class="updateProductPrice"><br>
+            <div class="form-group col-sm-8">
+              <div id="myMultiselect" class="multiselect">
+                <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea2()">
+                  <select class="form-select" id="Ingredients_2">
+                    <option class="sizeINGgr">Ingredients</option>
+                  </select>
+                  <div class="overSelect"></div>
+                </div>
+                <div id="mySelectOptions" class = "unorderedIngredientListUpdate">
+                  <label ><input type="checkbox" value="first" class="updateCheckboxIngredient"/> First checkbox</label>
+                  <label ><input type="checkbox" value="second" class="updateCheckboxIngredient"/> Second checkbox</label>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div>
+              <input type="submit" value="Update" class="updateProductSubmit" id="Insert_2">
+            </div>
+            </form> 
+          </ul>
+      </section>
+      </div>
+      
+      <div>
+      <section id="VAP">
+        <h2>View All Products</h2>
+        <div>
+          Displays current products and their corresponding information.
+        </div>
+      
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="viewAllProducts">
+            </tbody>
+          </table>
+        </div>
+      </section>
+      </div>
+
+    
+      
+      <script src="navbar.js"></script>
+
+  </body>
+</html>

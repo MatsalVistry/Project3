@@ -1,0 +1,123 @@
+/* navbar*/
+.navbar {
+    background-color: #3C3638;
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+
+    color: white;
+}
+
+.btn-size{
+    background: #3C3638;
+    color: white;
+}
+
+.btn-size.active{
+    background: #444;
+}
+/* size of font selection css end*/
+
+/* shurui edits for size change functionality to work: */
+
+.right {
+    background-color: #AF9690;
+}
+
+
+input{
+    background-color: #FFFFFF;
+    border: 1px solid #AF9690;
+    color: #AF9690;
+
+}
+
+
+
+.cart-item {
+    background-color: white; 
+}
+
+/* text, font */
+
+
+
+.cart-h2 {
+
+    color: black;
+}
+
+
+
+/* button stylings */
+
+button {
+    background-color: #383838;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.delete {
+ 
+    border-color: #AF9690;
+    color: #AF9690
+}
+
+.delete:hover {
+    opacity: 0.7;
+}
+
+.confirm {
+    background-color: #383838;
+    color: white;
+ 
+}
+
+
+.cart {
+    background-color: #383838;
+    border-color: #383838;
+    color: white;
+  
+}
+
+.cart:hover {
+    background-color: #FFF5EA !important;
+    border-color: #FFF5EA !important;
+    color: #383838 !important;
+}
+
+#google_translate_element select{
+    background:#3C3638;
+}
+.themes {
+    background-color: #3C3638;
+  }
+
+  .themes a:hover {
+    background: #AF9690;
+    color: white;
+  }
+
+
+.side-panel {
+    background-color: #AF9690;
+}
+
+.coffee-product
+{
+    border-color: #AF9690;
+}
+
+.addOnOption:hover {
+    opacity: 0.7;
+}
+
+.right{
+    background-color: #68534B;
+}

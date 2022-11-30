@@ -1,0 +1,492 @@
+/* navbar*/
+.navbar {
+    overflow: hidden;
+    background-color: #1F3933;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    opacity: .7;
+}
+
+
+.navbar-padding {
+    margin-top: 5em;
+    /* Add a top margin to avoid content overlay */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    /*resest browser css and removes navbar left white space*/
+}
+
+/* size of font selection css begin*/
+.navbar span {
+    /* width: 0;  */
+    /* display: flex; */
+    justify-content: right;
+    padding: 14px;
+}
+
+/* container layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: block;
+    align-content: center;
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 1168px;
+    padding-bottom: 1rem;
+    z-index: 1;
+    transition: 0.5s;
+
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left {
+    width: 60%;
+    left: 8.5rem;
+    z-index: 1;
+}
+
+.right {
+    background-color: #2b534a;
+    width: 30%;
+    height: 85%;
+    border-radius: 6px;
+    padding: 0.5rem;
+    z-index: 1;
+    position: fixed;
+    right: 8.5rem;
+    align-content: center;
+}
+
+.name-input {
+    margin-top: 3rem;
+}
+
+.name {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    position: relative;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+}
+
+input {
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: 1px solid #01B288;
+    border-width: 1.5px;
+    color: #01B288;
+    padding: 6px 20px;
+    margin: 0.25rem;
+    margin-left: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.cart-panel {
+    height: 85%;
+    overflow-y: scroll;
+}
+
+.drink-product {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.cart-item {
+    z-index: 8;
+    background-color: white;
+    border-radius: 6px;
+    height: 7.8rem;
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+
+}
+
+/* text, font */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    /* margin-top: 1.5rem;
+    margin-bottom: 1.5rem; */
+    display: inline;
+}
+
+.cart-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    position: relative;
+    margin-top: 0;
+    z-index: 2;
+    color: white;
+}
+
+.cart-item .productName {
+    margin: 0;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 0.5rem;
+}
+
+/* button stylings */
+
+button {
+    background-color: #1F3933;
+    border: 1px solid black;
+    border-width: 1.5px;
+    color: white;
+    padding: 6px 20px;
+    margin: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+    cursor:pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.add {
+    display: inline-block;
+}
+
+.delete {
+    position: relative;
+    margin: 0;
+    border-color: #FF7276;
+    float: right;
+    color: #FF7276
+}
+
+.delete:hover {
+    opacity: 0.7;
+}
+
+.confirm {
+    background-color: #383838;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    margin-top: 6.5px;
+    width: 100%;
+    position: relative;
+    font-size: 28px;
+    transition-duration: 0.2s;
+}
+
+.confirm:hover {
+    opacity: 0.7;
+}
+
+.cart {
+    background-color: #383838;
+    border-color: #383838;
+    border-width: 1.5px;
+    color: white;
+    padding: 6px 20px;
+    margin: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+    opacity: 0.8;
+}
+
+.cart:hover {
+    background-color: yellow !important;
+    border-color: yellow !important;
+    color: #383838 !important;
+}
+
+.themes {
+    background-color: #1F3933;
+
+}
+
+/* Links inside the navbar */
+.themes {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    color: #01B288;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: white;
+    border: none;
+
+}
+
+option {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Change background on mouse-over */
+.themes a:hover {
+    background: #01B288;
+    color: white;
+}
+
+.coffee-product {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #01B288;
+    border-width: 4px;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    margin-top: 2rem;
+}
+
+.top-sp {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+/* .right-sp{
+    position:relative;
+    width: 30%;
+} */
+
+.img-cont {
+    position: relative;
+    float: left;
+    width: 40%;
+    border: 1px solid;
+}
+
+img {
+    position: relative;
+    height: 100%;
+    width: 200px;
+}
+
+.prodName-cont {
+    position: relative;
+    float: right;
+    justify-items: center;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+
+#google_translate_element select {
+    background: #1F3933;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 50px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+    font-size: 16px;
+}
+
+/*google translate link | logo */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.btn-size {
+    padding: 0 10px;
+    display: inline-flex;
+    background: #1F3933;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+}
+
+.btn-size.active {
+    background: #444;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.description {
+    font-size: 2em;
+}
+
+#cart {
+    color: white;
+}
+
+
+/* side panel */
+.side-panel {
+    background-color: #d4e9e2;
+    position: fixed;
+    z-index: 5;
+    width: 40%;
+    align-content: center;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    visibility: hidden;
+    padding-left: 6.5vh;
+    padding-right: 6.5vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sp-container {
+    background-color: black;
+    width: 100%;
+}
+
+.sp-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+}
+
+.sp-pic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 3px solid #01B288;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sp-pic img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* .cancel-button {
+    background-color: #01B288;
+} */
+
+.sp-h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.skip-link {
+    display: none;
+}

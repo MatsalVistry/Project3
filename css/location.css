@@ -1,0 +1,260 @@
+/* navbar*/
+.navbar {
+    overflow: hidden;
+    background-color: #1F3933;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.navbar div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    /* background: #01B288; */
+    opacity: .7;
+    color: white;
+}
+
+
+.navbar-padding {
+    margin-top: 5em;
+}
+
+body {  
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 100%;
+    margin: 0; /*resest browser css and removes navbar left white space*/
+} 
+
+/* size of font selection css begin*/
+.navbar span{
+    justify-content: right;
+    padding: 14px;
+}
+
+.btn-size{
+    padding: 0 10px;
+    display: inline-flex;
+    background: #00704A;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-size.active{
+    background: #444;
+}
+
+/* container layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.container {
+    display: block;
+    align-content: center;
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 1168px;
+    padding-bottom: 1rem;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left {
+    width: 70%;
+    left: 8.5rem;
+}
+
+.right {
+    background-color: #d4e9e2;
+    width: 30%;
+    height: 85vh;
+    border-radius: 15px;
+    opacity: 0.8;
+    padding: 0.5rem;
+    z-index: 1;
+    position: absolute;
+    right: 8.5rem;
+    align-content: center;
+    text-align: center;
+    border: 3px solid black;
+}
+
+/* .info-section{
+    height: 700px;
+} */
+
+.map {
+    width: 700px;
+    height: 85vh;
+    position:relative;
+    border-radius: 20px;
+    border: 15px solid #01B288;
+}
+
+
+/* font stylings */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    position: relative;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    color: black;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+.themes {
+    background-color: #1F3933;
+  }
+  
+  /* Links inside the navbar */
+  .themes {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+  }
+  
+  option{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Change background on mouse-over */
+  .themes a:hover {
+    background: #01B288;
+    color: white;
+  }
+  
+  
+  .themes-padding {
+    margin-top: 5em; /* Add a top margin to avoid content overlay */
+  }
+
+.info-section
+{
+    color: white;
+}
+
+.right
+{
+    color: white;
+    /* scroll bar */
+    overflow-y: scroll; 
+}
+
+#google_translate_element select{
+    background: #1F3933;
+    border: none;
+    position: relative;
+    color: white;
+    text-align: center;
+    height: 200%;
+    font-size: 16px;
+    justify-content: center;
+  }
+    
+  .goog-logo-link{
+      display:none!important;
+  }
+  
+  .goog-te-gadget{
+      color:transparent!important;
+  }
+  
+  .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+  }
+
+  .themes {
+    background-color: #1F3933;
+
+  }
+  
+  /* Links inside the navbar */
+  .themes {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    color: #01B288;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: white;
+    border:none;
+
+  }
+
+.h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    text-align: center;
+    color: black;
+}
+
+.h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    text-align: center;
+    color: black;
+}
+
+.skip-link {
+    display: none;
+}

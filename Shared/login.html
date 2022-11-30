@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <link id="mainStyleSheet" rel="stylesheet" href="../css/login.css" />
+    <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="1090263784824-avcj2jdsl6j0f7ebu9s1mhu82k5p7106.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+</head>
+<body>
+    <a class="skip-link" href="#maincontent">Skip to main</a>
+    <div class="navbar">
+        <a href="">Starbucks</a>
+        <div class="menu-dropdown" for="sheetstyle" href="#change style" >
+            <select  class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+                <option  value="default" selected>Default</option>
+                <option  value="protanopia">Protanopia</option>
+                <option  value="deuteranopia">Deuteranopia</option>
+                <option  value="tritanopia">Tritanopia</option>
+            </select>
+        </div>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() 
+            {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div class="menu-dropdown" for="sheetstyle" href="#change style">
+            <select  class="themes" name="themes" onchange="changeSize(value)" id="fontSizes">
+                <option class="btn-size" value="small()">Small</option>
+                <option class="btn-size" value="original()" selected>Original</option>
+                <option class="btn-size" value="medium()" >Medium</option>
+                <option class="btn-size" value="large()">Large</option>
+                <option class="btn-size" value="larger()">Larger</option>c
+            </select>
+        </div>
+        
+        
+    </div>
+    <main id="maincontent">
+        <div class="content" id="content">
+            
+            <div class="navbar-padding"></div>
+
+            <br>
+            <div class="title">Welcome to StarBucks!</div>
+            
+            <div class="split">
+                <div>
+                    <div class="h2">
+                        Customer Self-Service
+                    </div>
+                    
+                    <div class="customer">  
+                        <button onclick="customerMenu()" id="menu">Customer Menu</button>
+                    </div>
+                </div>
+                
+                <div class="verticalLine">
+                </div>
+
+                <div>
+                    <div class="h2">
+                        Server and Manager Portal
+                    </div>
+                    
+                    <form id="form" class="login-container" method=POST>
+                        <label>Email : </label>   
+                        <input type="text" placeholder="Enter Email" id="email" class='email' value="MileyBeck@gmail.com" required>  
+                        <label>Password : </label>   
+                        <input type="password" placeholder="Enter Password" id="password" class='password' value="Beck777" required>  
+                        <input type="checkbox" onclick="showPassword()">
+                        <label class="checkboxText">Show Password</label>
+                        <button type="submit" class="loginButton" id="login">Login</button>
+                    </form>
+
+                    <div class="googleOAuth">
+                        <div id='buttonDiv'></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <script src="./SharedJavascript/login.js" defer></script>
+        <script>
+            
+        </script>
+    </main>
+</body>
+
+</html>

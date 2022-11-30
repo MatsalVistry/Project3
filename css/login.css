@@ -1,0 +1,227 @@
+/* navbar*/
+.navbar {
+    overflow: hidden;
+    background-color: #1F3933;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    opacity: .7;
+}
+
+
+.navbar-padding {
+    margin-top: 5em;
+    /* Add a top margin to avoid content overlay */
+}
+
+body {  
+    font-family: Calibri, Helvetica, sans-serif;  
+    font-size: 100%;
+    margin: 0; /*resest browser css and removes navbar left white space*/
+}  
+
+/* size of font selection css begin*/
+.navbar span{
+    /* width: 0;  */
+    /* display: flex; */
+    justify-content: right;
+    padding: 14px;
+}
+
+.btn-size{
+    padding: 0 10px;
+    display: inline-flex;
+    background: #1F3933;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-size.active{
+    background: #444;
+}
+/* size of font selection css end*/
+
+
+.content{
+    transition: 0.5s;
+}
+
+.title{
+    text-align: center;
+    font-size: 4em;
+}
+
+button {   
+    background-color: #00704A;   
+    width: 100%;  
+    color: white;   
+    padding: 15px;   
+    margin: 10px 0px;   
+    border: none;   
+    cursor: pointer;   
+    font-size: initial;
+    }   
+  
+input[type=text], input[type=password] {   
+    width: 100%;   
+    margin: 1em 0;  
+    padding: 1em 1.25em;   
+    display: inline-block;   
+    border: 2px solid #00704A;   
+    box-sizing: border-box;   
+    font-size: initial;
+}  
+button:hover {   
+    opacity: 0.7;  
+}   
+    
+.login-container {   
+    padding: 5em; 
+    padding-top: 1em;
+}   
+
+.customer{
+    padding: 1.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 0;
+}
+
+input[type="checkbox"]{
+    width: 2em;
+    height: 2em;
+    vertical-align: top;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+#google_translate_element select{
+    background:#1F3933;
+    border: none;
+    border-radius:3px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 50px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+    font-size: 16px;
+    }
+    
+    /*google translate link | logo */
+      .goog-logo-link{
+      display:none!important;
+      }
+    .goog-te-gadget{
+    color:transparent!important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
+
+    .themes {
+    background-color: #1F3933;
+
+  }
+  
+  /* Links inside the navbar */
+  .themes {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    color: #01B288;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    color: white;
+    border:none;
+
+  }
+  
+  option{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Change background on mouse-over */
+  .themes a:hover {
+    background: #01B288;
+    color: white;
+  }
+
+  .h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    position: relative;
+    text-decoration: underline;
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+
+/* class split align items side by side */
+.split {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.googleOAuth {
+    display: flex;
+    justify-content: center;
+}
+
+.verticalLine {
+    border-left: thin solid black;
+  }
+
+  .pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
+
+/* hide class called skip link */
+.skip-link {
+    display: none;
+}

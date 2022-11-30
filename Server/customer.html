@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="mainStyleSheet" rel="stylesheet" href="../css/customer.css" />
+    <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet" />
+    <title>Customer Order</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  </head>
+  <body>
+    <!-- <a class="skip-link" href="#maincontent">Skip to main</a> -->
+    <div class="navbar">
+        <div class="menu-dropdown" for="sheetstyle" href="#change style" >
+            <select  class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+                <option  value="default" selected>Default</option>
+                <option  value="protanopia">Protanopia Accessible Color Theme</option>
+                <option  value="deuteranopia">Deuteranopia</option>
+                <option  value="tritanopia">Tritanopia</option>
+            </select>
+        </div>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() 
+            {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <div class="menu-dropdown" for="sheetstyle" href="#change style">
+            <select  class="themes" name="themes" onchange="changeSize(value)" id="fontSizes">
+                <option class="btn-size" value="small()">Small</option>
+                <option class="btn-size" value="original()" selected>Original</option>
+                <option class="btn-size" value="medium()" >Medium</option>
+                <option class="btn-size" value="large()">Large</option>
+                <option class="btn-size" value="larger()">Larger</option>
+            </select>
+        </div>
+
+        <a href="./location.html">Locations</a>
+
+        <a class="redbuttonforLogin" href="../Shared/login.html">Exit</a>
+        
+    </div>
+    <main id="maincontent">
+        <div id="content">
+            <div class="container">
+                <div class="wrapper">
+                    <section class="left">
+                        <div class="header">Starbucks Menu ☕️</div>
+                        <div class="description">
+                            <br>
+                            Directions:
+                            <br>
+                            <br>
+                            1. Input your name.
+                            <br>
+                            2. To add an item to cart, select desired items and corresponding customizations.
+                            <br>
+                            3. To complete order, click confirm. 
+                        </div>
+                        <div class="name-input">
+                            <form>
+                                <div class="name h2">Customer Name: </div>
+                                <input type="text" id="name" name="name" placeholder="First Name" class="customerName">
+                            </form>
+                        </div>
+                        <div class="h2">
+                            <div class="drinks">Coffee</div>  
+                            <div class="coffee"></div>
+                            <div class="drinks">Tea</div>  
+                            <div class="teas"></div>
+                            <div class="food">Sandwich</div>  
+                            <div class="sandwich"></div>
+                            <div class="food">Cookie</div>  
+                            <div class="cookie"></div>
+                            <div class="food">Muffin</div>  
+                            <div class="muffin"></div>
+                        </div>
+                        
+                        
+                    </section>
+                    <div class="right">
+                        <div id ="cart" class="cart-h2">Cart</div>
+                        <div class="cart-panel">
+                        </div>
+                        <button class="confirm" id="confirm" onclick="confirmationClick()">
+                            Confirm <span class="price-total notranslate">$0.00</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-panel" id="side-panel">
+                <div class="sp-header">Let's customize your order 🖤</div>
+                <div class="sp-pic"> 
+                    <img src="../imgs/caramel_latte.png" alt="">
+                </div>
+                <div class="coffee-addons">
+                    <div class="coffee-size">
+                        <div class="sp-h2">Size</div>
+                        <button class="size" input='Tall' id="1" onclick="clickHandler(this)" type="button">Tall</button>
+                        <button class="size" input='Grande' id="2" onclick="clickHandler(this)" type="button">Grande</button>
+                        <button class="size" input='Venti' id="3" onclick="clickHandler(this)" type="button">Venti</button>
+                    </div>
+                    <div class="add-ons-class">
+                        <div class="sp-h2">Add Ons</div>
+                        <button class="addOnOption" id="4" onclick="clickAddOnHandler(this)" input='Whip' type="button">Whip</button>
+                        <button class="addOnOption" id="5" onclick="clickAddOnHandler(this)" input='Caramel' type="button">Caramel</button>
+                        <button class="addOnOption" id="6" onclick="clickAddOnHandler(this)" input='Syrup' type="button">Syrup</button>
+                        <button class="addOnOption" id="7" onclick="clickAddOnHandler(this)" input='Expresso Shot' type="button">Expresso Shot</button>
+                        <button class="addOnOption" id="8" onclick="clickAddOnHandler(this)" input='Protein Powder' type="button">Protein Powder</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button type="button" id="9" onclick=addToCart()>Add to cart</button>
+                <button class = "cancel-button" type="button" id="10" onclick=hide()>Cancel</button>
+            </div>
+            <div class="side-panel" id="side-panel-food">
+                <div class="sp-header">Let's customize your order 🖤</div>
+                <div class="sp-pic"> 
+                    <img src="../imgs/caramel_latte.png" alt="">
+                </div>
+                <div class="coffee-addons">
+                    <div class="coffee-size">
+                        <div class="sp-h2"> Temperature </div>
+                        <button class="size" input='Hot' id="11" onclick="clickHandler(this)" type="button">Hot</button>
+                        <button class="size" input='Cold' id="12" onclick="clickHandler(this)" type="button">Cold</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button type="button" id="13" onclick=addToCart()>Add to cart</button>
+                <button class = "cancel-button" type="button" id="14" onclick=hide()>Cancel</button>
+            </div>
+        </div>
+        <script src="./ServerJavaScript/serverPopulate.js" defer></script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </main>
+  </body>
+</html>

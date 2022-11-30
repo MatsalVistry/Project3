@@ -1,0 +1,90 @@
+section ul li {
+  background-color: rgb(18, 156, 203);
+}
+
+section input::placeholder{
+  color: #3CAAB7;
+}
+
+section input {
+  border: 1px solid #3CAAB7;
+  color: #3CAAB7;
+}
+
+
+section select {
+  border: 1px solid #3CAAB7;
+  color: #3CAAB7;
+}
+
+.form-select{
+  border: 1px solid #3CAAB7;
+  color: #3CAAB7;
+}
+
+input:hover{
+  background-color: #75D3E4;
+}
+
+#mySelectOptions {
+  border: 1px solid #3CAAB7;
+  color: #3CAAB7;
+}
+
+.navbar {
+  background-color: #283D42;
+}
+
+.navbar a {
+  color:white;
+}
+
+
+.SideBarNav{
+  background-color: #283D42;
+}
+
+.SideBarNav a{
+  color: white;
+}
+
+.SideBarNav a:hover{
+  color: #65eccd;
+}
+
+.themes {
+  background-color: #283D42;
+}
+
+.themes {
+  color:white;
+}
+
+.themes a:hover {
+  background: #3CAAB7;
+}
+
+#google_translate_element select{
+  background: #283D42;
+}
+
+
+.btn-size{
+
+  display: inline-flex;
+  background: #283D42;
+  color: white;
+
+}
+
+.btn-size.active{
+  background: #444;
+}
+
+.cart-h2 {
+  color: white;
+}
+
+.skip-link {
+  display: none;
+}

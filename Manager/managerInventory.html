@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manager Inventory</title>
+  <link id="mainStyleSheet" rel="stylesheet" href="default.css" />
+  <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+  <!-- <link id="mainStyleSheet" rel="stylesheet" href="style.css" /> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="./ManagerJavascript/managerInventoryScript.js" defer></script>
+</head>
+<a class="skip-link" href="#maincontent">Skip to main</a>
+<body>
+  <div class="navbar">
+    <div>
+      <a href='managerReports.html'>Reports</a>
+    </div>
+
+    <div>
+      <a href='managerProducts.html'>Products</a>
+    </div>
+
+    <div>
+      <a href='managerInventory.html'>Inventory</a>
+    </div>
+    <div class="menu-dropdown" for="sheetstyle" href="#change style">
+      <select class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+        <option value="default" selected>Default</option>
+        <option value="protanopia">Protanopia</option>
+        <option value="deuteranopia">Deuteranopia</option>
+        <option value="tritanopia">Tritanopia</option>
+      </select>
+    </div>
+
+    <div>
+      <div id="google_translate_element"></div>
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+
+    <div class="menu-dropdown" for="sheetstyle" href="#change style">
+      <select class="themes" name="themes" onchange="changeSize(value)" id="fontSizes">
+        <option class="btn-size" value="small()">Small</option>
+        <option class="btn-size" value="original()" selected>Original</option>
+        <option class="btn-size" value="medium()">Medium</option>
+        <option class="btn-size" value="large()">Large</option>
+        <option class="btn-size" value="larger()">Larger</option>
+      </select>
+    </div>
+
+    <div>
+      <a href='../Shared/login.html'>Logout</a>
+    </div>
+
+  </div>
+
+  <script src="./ManagerJavascript/translate.js" defer></script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="navbar.js"></script>
+
+  <main id="maincontent">
+    <section id="content">
+      <h2>View All Ingredients</h2>
+      <div>
+        Displays current ingredients inventory and their corresponding information.
+      </div>
+
+      <div style="display: flex; flex-direction: row;">
+        <div>
+          <section>
+            <h2>Add New Ingredient </h2>
+            <div>
+              Directions:
+              <br>
+              <br>
+              1. Input new ingredients's name.
+              <br>
+              2. Input new ingredients's quantity in stock.
+              <br>
+              3. Click submit.
+            </div>
+            <ul>
+              <div>
+                <input type="text" placeholder="Name" id="Name_1" name="Name:" class="addNewIngredientName"><br>
+                <input type="text" placeholder="Quantity" id="Quantity_1" name="Quantity:"
+                  class="addNewIngredientQuantity"><br>
+              </div>
+              <div>
+                <input type="submit" class="addNewInventorySubmit" id="Submit_1">
+              </div>
+              </form>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Update Ingredient</h2>
+            <div>
+              Directions:
+              <br>
+              <br>
+              1. Input existing ingredients's name.
+              <br>
+              2. Input existing ingredients's updated quantity in stock.
+              <br>
+              3. Click submit.
+            </div>
+            <ul>
+              <div>
+                <input type="text" placeholder="Name" id="Name_2" name="Name:" class="updateIngredientName"><br>
+                <input type="text" placeholder="Quantity" id="Quantity_2" name="Quantity:"
+                  class="updateIngredientQuantity"><br>
+              </div>
+              <div>
+                <input type="submit" class="updateInventorySubmit" id="Submit_2">
+              </div>
+              </form>
+            </ul>
+          </section>
+        </div>
+
+        <div class="table_wrapper" style="overflow:scroll;height:600px;width:100%;overflow:auto">
+          <table width="800" border="0">
+            <tbody class="viewAllIngredients">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script src="navbar.js"></script>
+  </main>
+</body>
+
+</html>

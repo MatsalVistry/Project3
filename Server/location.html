@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Location</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/location.css" />
+    <link id="secondaryStyleSheet" rel="stylesheet" href="" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./customer.html">Back to Menu</a>
+        <div class="menu-dropdown" for="sheetstyle" href="#change style">
+            <select  class="themes" name="themes" onchange="changeFunc(value)" id="selectStylesheet">
+              <option  value="default" selected>Default</option>
+              <option  value="protanopia">Protanopia</option>
+              <option  value="deuteranopia">Deuteranopia</option>
+              <option  value="tritanopia">Tritanopia</option>
+            </select>
+        </div>
+
+        <div>
+            <div id="google_translate_element"></div>
+            <script type="text/javascript">
+                function googleTranslateElementInit() 
+                {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+        <div class="menu-dropdown" for="sheetstyle" href="#change style">
+            <select  class="themes" name="themes" onchange="changeSize(value)" id="selectStylesheet">
+                <option class="btn-size" value="small()">Small</option>
+                <option class="btn-size" value="original()" selected>Original</option>
+                <option class="btn-size" value="medium()" >Medium</option>
+                <option class="btn-size" value="large()">Large</option>
+                <option class="btn-size" value="larger()">Larger</option>
+            </select>
+        </div>
+
+        <a class="redbuttonforLogin" href="../Shared/login.html">Exit</a>
+    </div>
+
+    <div class="container" id="content">
+        <div class="wrapper">
+            <div class="left">
+                <div class="map-section">
+                    <iframe class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12236.343421114465!2d-96.3491733828632!3d30.614009408466046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stamu%20msc%20starbucks!5e0!3m2!1sen!2sus!4v1668847111462!5m2!1sen!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="right">
+                <div class="info-section">
+                    <p class="h2">VISIT US 👋</p>
+                    <p class="h4">
+                        275 Joe Routt Blvd
+                        <br>
+                        College Station, TX 77843
+                    </p>
+                    
+                    <p class="h2">CONTACT US 📞</p>
+                    <p class="h4">
+                        979-845-8681
+                    </p>
+
+                    <p class="h2">OPEN HOURS ⏰</p>
+                    <p class="h4">
+                        MON - FRI:
+                        <br>
+                        8:00 AM - 6:00 PM
+                        <br><br>
+                        SAT:
+                        <br>
+                        10:00 AM - 5:00 PM
+                        <br><br>
+                        SUN:
+                        <br>
+                        12:00 PM - 5:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./ServerJavaScript/location.js" defer></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

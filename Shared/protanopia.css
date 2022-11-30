@@ -1,0 +1,62 @@
+.navbar {
+    background-color: #393734;
+  }
+  
+/* Links inside the navbar */
+.navbar a {
+
+    color: white;
+
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    color: #696145;
+}
+
+
+.btn-size{
+
+    background: #393734;
+    color: white;
+
+}
+
+.btn-size.active{
+    background: #444;
+}
+/* size of font selection css end*/
+
+
+button {   
+    background-color: #696145;   
+    color: white;   
+
+    }   
+  
+input[type=text], input[type=password] {   
+
+
+    border: 2px solid #696145;   
+
+}  
+
+#google_translate_element select{
+    background: #393734;
+    color: white;
+
+}
+    
+.themes {
+    background-color: #393734;
+  }
+  
+
+  .themes a:hover {
+    background: #696145;
+    color: white;
+  }
+    
+  .skip-link {
+    display: none;
+}
